@@ -8,25 +8,34 @@ export default class Counter extends React.Component{
         this.state = {
             counter : 0,
         }
-        this.handler = this.handler.bind(this)
+        this.handlerIncreaseNum = this.handlerIncreaseNum.bind(this);
+        this.handlerLowNum = this.handlerLowNum.bind(this);
+
     }
 
-    handler(val){
+    handlerIncreaseNum(){
         if(this.state.counter >= 0){
-            if(val === "add"){
-                this.setState (
-                    {counter : this.state.counter + 1}
-                )
-            }else if(val === "low"){
-                this.setState (
-                    {counter : this.state.counter - 1}
-                )
-            }
+            this.setState( state => ({
+                counter : state.counter + 1
+            }));
         }
     }
+
+    // handlerLowNum(){
+    //     if(this.state.counter >= 0){
+    //         this.setState( state => ({
+    //             counter : state.counter--
+    //         }));
+    //     }
+    // }
+
     render(){
         return(
-            <Button title={this.state.counter} clickHandler={() => this.handler()}/>
+            <div>
+                <h1>{this.state.counter}</h1>
+                <Button title={"increase"} clickHandler={this.handlerIncreaseNum}/>
+                <Button title={"decrease"} clickHandler={this.handlerLowNum}/>
+            </div>
         )
     }
 
