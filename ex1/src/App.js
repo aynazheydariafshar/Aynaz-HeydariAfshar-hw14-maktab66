@@ -1,8 +1,10 @@
 import './Assests/Styles/App.css';
+import Counter from './Component/Counter';
 
 function App() {
   return (
     <div className="App">
+      <Counter />
     </div>
   );
 }
