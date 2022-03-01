@@ -9,7 +9,7 @@ export default class Counter extends React.Component{
             counter : 0,
         }
         this.handlerIncreaseNum = this.handlerIncreaseNum.bind(this);
-        this.handlerLowNum = this.handlerLowNum.bind(this);
+        this.handlerDecreaseNum = this.handlerDecreaseNum.bind(this);
 
     }
 
@@ -21,20 +21,20 @@ export default class Counter extends React.Component{
         }
     }
 
-    // handlerLowNum(){
-    //     if(this.state.counter >= 0){
-    //         this.setState( state => ({
-    //             counter : state.counter--
-    //         }));
-    //     }
-    // }
+    handlerDecreaseNum(){
+        if(this.state.counter > 0){
+            this.setState( state => ({
+                counter : state.counter - 1
+            }));
+        }
+    }
 
     render(){
         return(
             <div>
                 <h1>{this.state.counter}</h1>
                 <Button title={"increase"} clickHandler={this.handlerIncreaseNum}/>
-                <Button title={"decrease"} clickHandler={this.handlerLowNum}/>
+                <Button title={"decrease"} clickHandler={this.handlerDecreaseNum}/>
             </div>
         )
     }
