@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import '../Assests/Styles/Counter.css'
 
 
 export default class Counter extends React.Component{
@@ -31,10 +32,12 @@ export default class Counter extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className=''>
                 <h1>{this.state.counter}</h1>
-                <Button title={"increase"} clickHandler={this.handlerIncreaseNum}/>
-                <Button title={"decrease"} clickHandler={this.handlerDecreaseNum}/>
+                <div className='style-btn'>
+                    <Button title={"increase"} clickHandler={this.handlerIncreaseNum}/>
+                    <Button title={"decrease"} clickHandler={this.handlerDecreaseNum}/>
+                </div>
             </div>
         )
     }
