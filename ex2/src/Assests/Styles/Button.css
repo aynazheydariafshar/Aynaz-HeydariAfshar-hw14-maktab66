@@ -1,0 +1,10 @@
+.btn{
+    font-size: 25px;
+    margin: 20px;
+}
+
+.btn:hover{
+    background-color: white;
+    cursor: pointer;
+    color: green;
+}
