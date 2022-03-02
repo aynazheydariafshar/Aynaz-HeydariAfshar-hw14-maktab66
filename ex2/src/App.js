@@ -1,9 +1,10 @@
 import './Assests/Styles/App.css';
+import ColorGenerator from './Components/ColorGenerator';
 
 function App() {
   return (
     <div className="App">
-      heelo
+      <ColorGenerator />
     </div>
   );
 }
