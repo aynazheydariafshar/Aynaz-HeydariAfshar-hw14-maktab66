@@ -23,8 +23,8 @@ export default class ColorGenerator extends React.Component{
     render(){
         return(
           <div>
-              {this.state.colors.map(item => <Color codeColor={item}/> )}
               <Button addColor={this.addColorRandom}/>
+              {this.state.colors.map(item => <Color codeColor={item}/> )}
           </div>
         )
     }

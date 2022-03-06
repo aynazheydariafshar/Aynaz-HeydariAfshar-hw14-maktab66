@@ -5,7 +5,7 @@ export default class Button extends React.Component{
     render(){
         return(
             <div>
-                <button class ="btn" onClick={this.props.addColor}>Add Color</button>
+                <button className='btn' onClick={this.props.addColor}>Add Color</button>
             </div>
         )
     }
