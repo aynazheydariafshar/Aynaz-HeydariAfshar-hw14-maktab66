@@ -19,6 +19,7 @@ export default class Counter extends React.Component{
             counter : state.counter + 1
         }));
     }
+    
 
     handlerDecreaseNum(){
         if(this.state.counter > 0){
