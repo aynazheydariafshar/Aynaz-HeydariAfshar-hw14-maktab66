@@ -12,7 +12,7 @@ export default class ColorGenerator extends React.Component{
     }
 
     addColorRandom(){
-        let randomColor = '#'+ Math.floor(Math.random() * 19777215).toString(16);
+        let randomColor = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6)
         let newArray = [];
         newArray.push(randomColor);
         this.setState( state => ({
